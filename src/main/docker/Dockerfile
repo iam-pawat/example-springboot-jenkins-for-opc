@@ -7,4 +7,4 @@ ENV JAVA_OPTIONS -Xmx256m -Djava.security.egd=file:///dev/./urandom
 
 EXPOSE 8080
 
-ADD target/@project.build.finalName@.jar /deployments/app.jar
+ADD target/@project.build.finalName@.jar /deployments/
