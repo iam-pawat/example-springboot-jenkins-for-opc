@@ -3,4 +3,4 @@ _sdfsdfsdf_
 **sdfsdfs**
 `Spring Boot`
 
-'งงมากกก 55555'
+'oc get all --selector app=appname'
