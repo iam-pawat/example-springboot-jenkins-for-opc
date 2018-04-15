@@ -2,8 +2,7 @@
 **Step for implement**
 <br/>
 - Config Maven Plugin in pox.xml
-<br/>
-```xml
+```
 <plugin>
     <artifactId>maven-resources-plugin</artifactId>
     <version>3.0.2</version>
@@ -30,5 +29,4 @@
     </executions>
 </plugin>
 ```
-
 'oc get all --selector app=appname'
