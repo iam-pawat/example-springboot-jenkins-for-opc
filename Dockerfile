@@ -8,3 +8,4 @@ ENV JAVA_OPTIONS -Xmx256m -Djava.security.egd=file:///dev/./urandom
 EXPOSE 8080
 
 ADD target/gs-rest-service-0.1.0.jar /deployments/app.jar
+USER app
