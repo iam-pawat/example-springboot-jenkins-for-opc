@@ -1,3 +1,2 @@
-# exclude everything except directory target, .idea, .mvn
-!/foo/bar
-!.idea
+/target/*
+/.idea/*
