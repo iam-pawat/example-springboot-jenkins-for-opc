@@ -2,6 +2,7 @@
 **Step for implement**
 <br/>
 - Config Maven Plugin in pox.xml
+_compile source file in`src/main/docker` to base directory_
 ```
 <plugin>
     <artifactId>maven-resources-plugin</artifactId>
