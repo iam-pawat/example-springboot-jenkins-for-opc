@@ -31,17 +31,10 @@
     </dependencies>
 
     <properties>
-        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- maven-compiler-plugin -->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <!-- Setting the image explicity to use redhat-openjdk -->
-        <!-- There is kind of issue honoring JAVA_OPTIONS with fabric8-s2i images -->
-        <fabric8.generator.from>fabric8/s2i-java</fabric8.generator.from>
     </properties>
-
-
     <build>
         <plugins>
             <plugin>
@@ -70,44 +63,6 @@
                                 </resource>
                             </resources>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>fabric8-maven-plugin</artifactId>
-                <version>3.5.30</version>
-                <configuration>
-                    <resources>
-                        <labels>
-                            <all>
-                                <property>
-                                    <name>app</name>
-                                    <value>example-springboot-jenkins-for-opc</value>
-                                </property>
-                                <property>
-                                    <name>hystrix.enabled</name>
-                                    <value>true</value>
-                                </property>
-                            </all>
-                        </labels>
-                    </resources>
-                    <enricher>
-                        <config>
-                            <spring-boot-health-check>
-                                <port>4444</port>
-                            </spring-boot-health-check>
-                        </config>
-                    </enricher>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>fmp</id>
-                        <goals>
-                            <goal>resource</goal>
-                            <goal>helm</goal>
-                            <goal>build</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
